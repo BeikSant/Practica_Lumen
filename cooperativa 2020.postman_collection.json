@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "bcbca5fc-151e-4b2b-a523-1ff38e4ca514",
+		"name": "cooperativa 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Nuevo Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "api_token",
+								"value": "LqFSdg8PM21kfPWWvW8x4vsXDxJbUVreJcdLtKIvYhUYRMDJXpZ8kRTGZ9GTPUb4E22S4KRhadDyX4nkBVGbgXq2LejO1vF6ml0SYHMFAXnGW5CJyrBlai7tAUggVXenWYA53C2CZxGHJFxdueSv5q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cedula\":\"444444444\",\n    \"nombres\":\"Juan\",\n    \"apellidos\":\"Armijos\",\n    \"genero\":\"masculino\",\n    \"estadoCivil\":\"soltero\",\n    \"correo\":\"juan@gmail.com\",\n    \"telefono\":\"235200\",\n    \"celular\":\"09888545445\",\n    \"direccion\":\"Loja\",\n    \"date_created\":\"2021-01-29 17:45:37\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/cliente/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cliente",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cliente/allJson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cliente",
+								"allJson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente cedula",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cliente/get/444444444?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cliente",
+								"get",
+								"444444444"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cliente/delete/444444444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cliente",
+								"delete",
+								"444444444"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Nueva Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "api_token",
+								"type": "text",
+								"value": "LqFSdg8PM21kfPWWvW8x4vsXDxJbUVreJcdLtKIvYhUYRMDJXpZ8kRTGZ9GTPUb4E22S4KRhadDyX4nkBVGbgXq2LejO1vF6ml0SYHMFAXnGW5CJyrBlai7tAUggVXenWYA53C2CZxGHJFxdueSv5q"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\":\"34\",\n    \"fechaApertura\":\"2021-01-29 17:45:37\",\n    \"tipoCuenta\":\"ahorro\",\n    \"saldo\":100,\n    \"date_created\":\"2021-01-29 17:45:37\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/cuenta/new/1950031375",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cuenta",
+								"new",
+								"1950031375"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuentas Cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cuenta/allJson/1950031375",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cuenta",
+								"allJson",
+								"1950031375"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cuenta Cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cuenta/delete/1950031375/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cuenta",
+								"delete",
+								"1950031375",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuenta Cliente por Numero",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/cuenta/get/1950031375/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"cuenta",
+								"get",
+								"1950031375",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "beiksant",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "beiksant",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "beiksant",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/usuario/salir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"usuario",
+								"salir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaccion",
+			"item": [
+				{
+					"name": "Retiro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "api_token",
+								"type": "text",
+								"value": "LqFSdg8PM21kfPWWvW8x4vsXDxJbUVreJcdLtKIvYhUYRMDJXpZ8kRTGZ9GTPUb4E22S4KRhadDyX4nkBVGbgXq2LejO1vF6ml0SYHMFAXnGW5CJyrBlai7tAUggVXenWYA53C2CZxGHJFxdueSv5q"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\":\"2021-01-29 17:45:37\",\n    \"valor\":10,\n    \"descripcion\":\"Compra\",\n    \"date_created\":\"2021-01-29 17:45:37\",\n    \"updated_ad\":\"2021-01-29 17:45:37\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/transaccion/retiro/1950031375/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"transaccion",
+								"retiro",
+								"1950031375",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deposito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "api_token",
+								"type": "text",
+								"value": "LqFSdg8PM21kfPWWvW8x4vsXDxJbUVreJcdLtKIvYhUYRMDJXpZ8kRTGZ9GTPUb4E22S4KRhadDyX4nkBVGbgXq2LejO1vF6ml0SYHMFAXnGW5CJyrBlai7tAUggVXenWYA53C2CZxGHJFxdueSv5q"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\":\"2021-01-29 17:45:37\",\n    \"valor\":20,\n    \"descripcion\":\"Compra\",\n    \"date_created\":\"2021-01-29 17:45:37\",\n    \"updated_ad\":\"2021-01-29 17:45:37\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/transaccion/deposito/1950031375/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"transaccion",
+								"deposito",
+								"1950031375",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
